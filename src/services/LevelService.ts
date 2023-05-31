@@ -1,7 +1,7 @@
 import Member from '../models/Member';
 import * as fs from 'fs';
 
-const dataFilePath = '../data/memberData.json';
+const dataFilePath = './data/memberData.json';
 const memberData: Member = JSON.parse(fs.readFileSync(dataFilePath, 'utf-8'));
 
 class LevelService {
