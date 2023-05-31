@@ -19,8 +19,9 @@ class UserInfo {
             .addFields(
                 { name: "等級", value: (await LevelService.getLevel(member.id.toString())).toString(), inline: true },
                 { name: "經驗値", value: (await LevelService.getExperience(member.id.toString())).toString(), inline: true },
-                { name: "貨幣", value: LevelService.getCurrency(member.id.toString()).toString(), inline: true }
-            );
+                { name: "貨幣", value: LevelService.getCurrency(member.id.toString()).toString(), inline: true },
+            )
+            .setColor(member.displayColor);
         return embed;
     }
 
