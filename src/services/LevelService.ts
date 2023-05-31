@@ -64,7 +64,6 @@ class LevelService {
         }
     }
 
-
     static async setCurrency(id: string, amount: number): Promise<void> {
         if (memberData[id]) {
             memberData[id].currency = amount;
