@@ -51,7 +51,9 @@ const userInfo = new UserInfo(client);
 
 client.on('interactionCreate', async (interaction) => {
     if (interaction.isCommand()) {
-        await userInfo.showUserInfo(interaction);
+        if (interaction.commandName === 'info') {
+            await userInfo.showUserInfo(interaction);
+        }
     }
 });
 
