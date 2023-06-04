@@ -125,13 +125,14 @@ class LevelService {
      * @returns A promise that resolves when the operation is done.
      */
     static async checkMemberData(id: string): Promise<void> {
-        if (!memberData[id]) { // 如果沒有成員資料
-            memberData[id] = { // 創建一個新資料
-                level: 1, // 初始等級為1
-                experience: 0, // 初始經驗值為0
-                currency: 0 // 初始貨幣數量為0
+        if (!memberData[id]) {
+            //init member data
+            memberData[id] = {
+                level: 1,
+                experience: 0,
+                currency: 0
             };
-            await this.saveMemberData(memberData); // 保存成員資料
+            await this.saveMemberData(memberData);
         }
     }
 
