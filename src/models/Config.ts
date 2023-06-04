@@ -3,5 +3,6 @@ interface Config {
         chatMessageExpCount: number;
         reationExpCount: number;
     }
+    logChannel: number;
 }
 export default Config;
