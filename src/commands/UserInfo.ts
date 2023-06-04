@@ -21,7 +21,8 @@ class UserInfo {
                 { name: "經驗値", value: (await LevelService.getExperience(member.id.toString())).toString(), inline: true },
                 { name: "貨幣", value: LevelService.getCurrency(member.id.toString()).toString(), inline: true },
             )
-            .setColor(member.displayColor);
+            .setColor(member.displayColor)
+            .setImage(member.user.avatarURL());
         return embed;
     }
 
